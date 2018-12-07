@@ -10,7 +10,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 
-export class LoginService {
+export class CommonService {
 
   constructor(
     private http: HttpClient,
