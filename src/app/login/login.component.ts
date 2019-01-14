@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
         this.isLoginFail = true;
       } else {
         this.isLoginFail = false;
-        // this.route.navigate
+        this.route.navigate(['/']);
       }
     });
   }
