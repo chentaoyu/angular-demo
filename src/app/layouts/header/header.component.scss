@@ -1,0 +1,19 @@
+.search-bar {
+    outline-style: none;
+    border: 0;
+    border-bottom: 1px solid #d9d9d9;
+    height: 20px;
+}
+
+.topBar {
+    > * {
+        padding: 0 12px;
+        display: block;
+        height: 100%;
+        float: left;
+    }
+
+    > *:not(:first-child):hover {
+        background: rgba(0,0,0,.025);
+    }
+}

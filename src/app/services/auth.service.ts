@@ -11,6 +11,7 @@ export class AuthService {
   isLoggedIn = false;
   // store the URL so we can redirect after logging in
   redirectUrl: string;
+
   login(account): Observable<boolean> {
     return of(true).pipe(
       tap(val => {

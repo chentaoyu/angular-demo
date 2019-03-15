@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,11 +13,13 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
+import { ViserModule } from 'viser-ng';
 /** 配置 angular i18n **/
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { OverlayPanelComponent } from './component/overlay-panel/overlay-panel.component';
 registerLocaleData(zh);
 
 @NgModule({
@@ -31,11 +34,14 @@ registerLocaleData(zh);
     AppRoutingModule,
     HttpClientModule,
     NgZorroAntdModule,
+    ViserModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
     LoginComponent,
     PageNotFoundComponent,
+    OverlayPanelComponent,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

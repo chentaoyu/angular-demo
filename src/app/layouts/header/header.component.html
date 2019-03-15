@@ -1,3 +1,22 @@
-<p>
-  header works!
-</p>
+<nz-header style="background: #fff; padding:0;">
+  <i class="anticon trigger" style="padding: 20px;" [class.anticon-menu-fold]="!isCollapsed"
+    [class.anticon-menu-unfold]="isCollapsed" (click)="changeCollapsed.emit()"></i>
+  <div class="topBar" style="float: right;">
+    <span>
+      <i nz-icon type="search" (click)="open($event)" theme="outline"></i>
+      <input (click)="searchInput($event)" class="search-bar" placeholder="站内搜索" [@openClose]="isOpen ? 'open' : 'closed'" />
+    </span>
+    <span>
+      <i nz-icon type="question-circle" theme="outline"></i>
+    </span>
+    <span>
+      <i nz-icon type="bell" theme="outline"></i>
+    </span>
+    <span style="width: 100px" (mouseover)="overPanel($event)">
+      <img width=20 src="https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png">
+      <span style="padding: 5px;cursor: default;">taoyu</span>
+    </span>
+  </div>
+</nz-header>
+
+<div *ngIf="isShow" style="width: 100px;height: 100px;background: black;position: absolute;right: 20px;"></div>

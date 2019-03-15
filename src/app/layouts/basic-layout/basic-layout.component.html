@@ -1,6 +1,6 @@
 <nz-layout style="height: 100%;overflow: hidden;">
-  <nz-sider style="overflow-y: scroll" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
-    <div class="logo">
+  <nz-sider style="overflow-y: scroll;box-shadow: 2px 0 6px rgba(0,21,41,.35);" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <div class="logo"><img style="width:100%" src="../../../assets/logo4.png" />
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
       <li nz-submenu>
@@ -22,10 +22,11 @@
     </ul>
   </nz-sider>
   <nz-layout>
-    <nz-header style="background: #fff; padding:0;">
+    <!-- <nz-header style="background: #fff; padding:0;">
       <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed"
         (click)="isCollapsed=!isCollapsed"></i>
-    </nz-header>
+    </nz-header> -->
+    <app-header [isCollapsed]="isCollapsed" (changeCollapsed)="changeCollapsed()"></app-header>
     <nz-content style="margin:0 16px;">
       <!-- <nz-breadcrumb style="margin:16px 0;">
         <nz-breadcrumb-item>User</nz-breadcrumb-item>
